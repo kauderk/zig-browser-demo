@@ -7,7 +7,7 @@ const imports = {
 }
 
 try {
-  const response = await fetch('math.wasm')
+  const response = await fetch('main.wasm')
   const bytes = await response.arrayBuffer()
   const result = await WebAssembly.instantiate(bytes, imports)
   const add = result.instance.exports.add
